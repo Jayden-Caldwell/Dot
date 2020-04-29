@@ -28,7 +28,7 @@ class Survey:
                     answers.append('Yes')               #appends to answers list
                     break                               #breaks out of while loop to answer next question(temp)
                 elif ans[0].upper() =='N':
-                    answers.append('No')
+                    answers.append('No')  
                     break
                 else:
                     print('Please type either \'Y\' or \'N\'') #asks user to type y or n(temp)
