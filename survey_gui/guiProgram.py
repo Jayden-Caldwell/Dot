@@ -24,15 +24,18 @@ class Survey:
 
     def ask_questions(self):                            #asks questions
         answers = []       
+        t = Text(app, text=(""))
         for index, row in self.questions.iterrows():
-             Text(app, text=(f"{row['question']}"))
+            #t.clear()
+            t.append(f"{row['question']}")
+            #Text(app, text=(f"{row['question']}"))
              
-             PushButton(app, command=lambda : answers.append('Yes'), text="Yes")
+            PushButton(app, command=lambda : answers.append('Yes'), text="Yes")
              
-             PushButton(app, command=lambda : answers.append('No'), text="No")
-        
+            PushButton(app, command=lambda : answers.append('No'), text="No")
+            t.destroy()
         nextQuestion = PushButton(app, command=lambda : self.write_answers_to_file(answers), text="Next Question")
-
+    
     def write_answers_to_file(self, answers):           #writes answers to csv
         with open('answers.csv', 'a+', newline='') as write_obj:
             writer = csv.writer(write_obj)
