@@ -1,5 +1,6 @@
 # DOT 
-
+## Contents
+- [Laws](#three-laws-of-robotics)
 ### Three Laws of Robotics
 
 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
