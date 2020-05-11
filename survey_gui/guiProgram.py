@@ -23,15 +23,15 @@ class Survey:
         self.questions = pd.read_csv(self.file)         #reads in the questions file
 
     def ask_questions(self):                            #asks questions
-        answers = []       
+        answers = []      # Stores the answers to the questions 
         for index, row in self.questions.iterrows():
              Text(app, text=(f"{row['question']}"))
              
              PushButton(app, command=lambda : answers.append('Yes'), text="Yes")
              
              PushButton(app, command=lambda : answers.append('No'), text="No")
-        
-        nextQuestion = PushButton(app, command=lambda : self.write_answers_to_file(answers), text="Next Question")
+             
+             nextQuestion = PushButton(app, command=lambda : self.write_answers_to_file(answers), text="Save answers")
 
     def write_answers_to_file(self, answers):           #writes answers to csv
         with open('answers.csv', 'a+', newline='') as write_obj:
