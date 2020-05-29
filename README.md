@@ -12,7 +12,7 @@
   * [How these apply to Dot](#how-these-apply-to-dot)
   * [Example videos](#some-videos-showing-human-robot-interaction)
 - [Hardware](#hardware)
-  * [Hardware we will use](#What-hardware-will-dot-use
+  * [Hardware we will use](#What-hardware-will-dot-use)
   * [Why we chose the hardware](#why-we-chose-the-hardware)
   * [IRobot Create 2](#irobot-create-2)
   * [Raspberry Pi 4](#raspberry-pi-4)
