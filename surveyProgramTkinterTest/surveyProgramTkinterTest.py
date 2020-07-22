@@ -81,7 +81,8 @@ class Survey(tk.Frame):
             
     
     def finish(self):
-        
+        self.write_answers_to_file(self.answers)
+        self.ques.configure(text = "Thankyou for taking the time to complete this short survey")
                    
             
     
