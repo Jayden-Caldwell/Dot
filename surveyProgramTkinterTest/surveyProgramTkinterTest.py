@@ -20,6 +20,7 @@ class Survey(tk.Frame):
         self.readIn()
         self.root = root
         self.canvas = canvas
+        self.count = 0
         
     def readIn(self):
         self.questions = pd.read_csv(self.file)         #reads in the questions file
@@ -29,10 +30,13 @@ class Survey(tk.Frame):
     
     
         easy_frame = Frame(self.canvas,bg="white")
-        easy_frame.place(relwidth=0.8,relheight=0.8,relx=0.1,rely=0.1)            
+        easy_frame.place(relwidth=0.8,relheight=0.8,relx=0.1,rely=0.1) 
+        global ques
+        ques = Label(easy_frame,text =self.questions["question"][self.count],font="calibri 12",bg="white")
+        ques.place(relx=0.5,rely=0.2,anchor=CENTER)           
         answers = []
-        
-        nextQuestion = Button(easy_frame,command=display,text="Next")
+        global nextQuestion
+        nextQuestion = Button(easy_frame,command=self.display,text="Next")
         nextQuestion.place(relx=0.87,rely=0.82,anchor=CENTER)
         
         self.root.mainloop()
@@ -56,26 +60,21 @@ class Survey(tk.Frame):
 
     def display(self):
         
-        if len(li) == 1:
-                e.destroy()
-                showMark(score)
-        if len(li) == 2:
-            nextQuestion.configure(text='End',command=calc)
-                
-        if li:
-            x = random.choice(li[1:])
-            ques.configure(text =easyQ[x][0])
+        number_of_questions = len(self.questions)
+        self.count = self.count + 1
+        if self.count == number_of_questions:
+            print("count == to number of questions")
+                #e.destroy()
+                #showMark(score)
+        elif self.count == (number_of_questions-1):
+            nextQuestion.configure(text='finish',command=display)
             
-            a.configure(text=easyQ[x][1],value=easyQ[x][1])
-      
-            b.configure(text=easyQ[x][2],value=easyQ[x][2])
-      
-            c.configure(text=easyQ[x][3],value=easyQ[x][3])
-      
-            d.configure(text=easyQ[x][4],value=easyQ[x][4])
+        if self.count <= number_of_questions:
+            ques.configure(text =self.questions["question"][self.count])
             
-            li.remove(x)
-            print(li) 
+            
+            
+            
     
     def write_answers_to_file(self, answers):           #writes answers to csv
         with open('answers.csv', 'a+', newline='') as write_obj:
