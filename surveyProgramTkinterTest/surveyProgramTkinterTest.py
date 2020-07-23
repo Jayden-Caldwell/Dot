@@ -26,6 +26,7 @@ class Survey(tk.Frame):
         self.current_answer = StringVar()
         self.setup()
         self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
+
  
     def readIn(self):
         self.questions = pd.read_csv(self.file)         #reads in the questions file
@@ -36,10 +37,10 @@ class Survey(tk.Frame):
         
         self.strtButton.configure(width = 102,height=2, activebackground = "#33B5E5", relief = RAISED)
         self.strtButton.place(relx=0.5,rely=0.9,anchor=CENTER)
-        lbl_with_my_gif = AnimatedGif(self.root, 'smileyBig.gif', 0.07)  # (tkinter.parent, filename, delay between frames)
-        lbl_with_my_gif.place(relx=0.5,rely=0.4,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
-        lbl_with_my_gif.configure(bg='black')#change background to match
-        lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
+        self.lbl_with_my_gif.place(relx=0.5,rely=0.4,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
+        self.lbl_with_my_gif.configure(bg='black')#change background to match
+        self.lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
+        
         
     def ask_questions(self):#asks questions
         self.easy_frame.place(relwidth=0.8,relheight=0.8,relx=0.1,rely=0.1) 
@@ -87,6 +88,7 @@ class Survey(tk.Frame):
     def hide_and_start(self):
         self.strtButton.lower()
         self.setup()
+        self.lbl_with_my_gif.destroy()
         self.ask_questions()
     
     
@@ -97,7 +99,8 @@ class Survey(tk.Frame):
     def resetValues(self):
         self.hide_question_components()
         self.strtButton.lift()
-        
+        self.lbl_with_my_gif = AnimatedGif(self.root, 'smileyBig.gif', 0.07)  # (tkinter.parent, filename, delay between frames)
+
         
     def setup(self):
         self.count = 0
@@ -109,19 +112,7 @@ class Survey(tk.Frame):
         self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
 
 
-    def animation(self):
-        frames = [PhotoImage(file='smiley.gif',format = 'gif -index %i' %(i)) for i in range(6)]
-        root.after(0, update, 0)
-    
-    
-    def update(ind):
-        frame = frames[ind]
-        ind += 1
-        canvas.create_image(50,10,image=frame,anchor=NW)
-        root.after(100, update, ind)
-    #canvas.create_image(50,10,image=img,anchor=NW)
-    
-        
+
 def main():
     root = tk.Tk()
     #root.attributes('-fullscreen', True)
@@ -134,10 +125,11 @@ def main():
     main = Survey('testQuestions.csv', root, canvas)
     canvas.grid(column = 0 , row = 1)
     #img = PhotoImage(file="smiley.gif")
-
+    #canvas.create_image(50,10,image=img,anchor=NW)
     main.startScreen()
-    
     root.mainloop()
+    
+    
     
 if __name__ == '__main__':
     main()
