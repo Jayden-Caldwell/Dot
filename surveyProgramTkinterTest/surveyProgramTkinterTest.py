@@ -99,7 +99,7 @@ class Survey(tk.Frame):
     def resetValues(self):
         self.hide_question_components()
         self.strtButton.lift()
-        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/somethingWrong.gif', 0.07)  # (tkinter.parent, filename, delay between frames)
+        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/oop.gif', 0.03)  # (tkinter.parent, filename, delay between frames)
 
         
     def setup(self):
