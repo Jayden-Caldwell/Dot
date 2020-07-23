@@ -11,6 +11,9 @@ import csv
 import tkinter as tk
 from tkinter import *
 
+
+from AnimatedGif.AnimatedGif import AnimatedGif
+
     
 
 class Survey(tk.Frame):
@@ -30,15 +33,19 @@ class Survey(tk.Frame):
 
     def startScreen(self):
         self.resetValues()
+        
         self.strtButton.configure(width = 102,height=2, activebackground = "#33B5E5", relief = RAISED)
-        self.strtButton.grid(column = 0 , row = 1)
-    
+        self.strtButton.place(relx=0.5,rely=0.9,anchor=CENTER)
+        lbl_with_my_gif = AnimatedGif(self.root, 'smiley.gif', 0.2)  # (tkinter.parent, filename, delay between frames)
+        lbl_with_my_gif.place(relx=0.5,rely=0.5,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
+        lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
+        
     def ask_questions(self):#asks questions
         self.easy_frame.place(relwidth=0.8,relheight=0.8,relx=0.1,rely=0.1) 
         self.ques.place(relx=0.5,rely=0.2,anchor=CENTER)           
-        self.nextQuestion.place(relx=0.87,rely=0.82,anchor=CENTER)
-        self.yes_choice.place(relx=0.5,rely=0.42,anchor=CENTER)
-        self.no_choice.place(relx=0.5,rely=0.52,anchor=CENTER)
+        self.nextQuestion.place(relx=0.5,rely=0.7,anchor=CENTER)
+        self.yes_choice.place(relx=0.43,rely=0.45,anchor=CENTER)
+        self.no_choice.place(relx=0.56,rely=0.45,anchor=CENTER)
         self.root.mainloop()
         
 
@@ -95,22 +102,38 @@ class Survey(tk.Frame):
         self.count = 0
         self.answers = []
         self.easy_frame = Frame(self.canvas,bg="white")
-        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 12",bg="white")
-        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next")
-        self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 10",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
-        self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 10",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
+        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 50",bg="white")
+        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 102,height=2,)
+        self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
+        self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
 
 
+    def animation(self):
+        frames = [PhotoImage(file='smiley.gif',format = 'gif -index %i' %(i)) for i in range(6)]
+        root.after(0, update, 0)
+    
+    
+    def update(ind):
+        frame = frames[ind]
+        ind += 1
+        canvas.create_image(50,10,image=frame,anchor=NW)
+        root.after(100, update, ind)
+    #canvas.create_image(50,10,image=img,anchor=NW)
+    
+        
 def main():
     root = tk.Tk()
-    
+    root.attributes('-fullscreen', True)
+    root.bind("<F11>",lambda event: root.attributes("-fullscreen", not root.attributes("-fullscreen")))
+    root.bind("<Escape>",lambda event: root.attributes("-fullscreen",False))
     #main.ask_questions()
     #survey.write_answers_to_file(answers)
     #main.pack(side="top", fill="both", expand=True)
-    canvas = Canvas(root,width = 720,height = 440, bg = 'black')
+    canvas = Canvas(root,width = 1064,height = 600, bg = 'black')
     main = Survey('testQuestions.csv', root, canvas)
     canvas.grid(column = 0 , row = 1)
-    
+    #img = PhotoImage(file="smiley.gif")
+
     main.startScreen()
     
     root.mainloop()
