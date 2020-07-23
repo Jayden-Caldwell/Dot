@@ -38,6 +38,7 @@ class Survey(tk.Frame):
         self.strtButton.place(relx=0.5,rely=0.9,anchor=CENTER)
         lbl_with_my_gif = AnimatedGif(self.root, 'smiley.gif', 0.2)  # (tkinter.parent, filename, delay between frames)
         lbl_with_my_gif.place(relx=0.5,rely=0.5,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
+        lbl_with_my_gif.configure(bg='black')#change background to match
         lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
         
     def ask_questions(self):#asks questions
