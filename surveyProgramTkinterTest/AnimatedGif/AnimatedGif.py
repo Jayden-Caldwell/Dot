@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 23 15:01:23 2020
 
-@author: mcdonhj1
-"""
 
 """ AnimatedGIF - a class to show an animated gif without blocking the tkinter mainloop()
 Copyright (c) 2016 Ole Jakob Skjelten <olesk@pvv.org>
