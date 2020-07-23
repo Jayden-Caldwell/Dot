@@ -84,7 +84,7 @@ class Survey(tk.Frame):
             
 
     def hide_and_start(self):
-        self.strtButton.grid_forget()
+        self.strtButton.lower()
         self.setup()
         self.ask_questions()
     
@@ -95,7 +95,7 @@ class Survey(tk.Frame):
     
     def resetValues(self):
         self.hide_question_components()
-        self.strtButton.grid()
+        self.strtButton.lift()
         
         
     def setup(self):
@@ -123,9 +123,9 @@ class Survey(tk.Frame):
         
 def main():
     root = tk.Tk()
-    root.attributes('-fullscreen', True)
-    root.bind("<F11>",lambda event: root.attributes("-fullscreen", not root.attributes("-fullscreen")))
-    root.bind("<Escape>",lambda event: root.attributes("-fullscreen",False))
+    #root.attributes('-fullscreen', True)
+    #root.bind("<F11>",lambda event: root.attributes("-fullscreen", not root.attributes("-fullscreen")))
+    #root.bind("<Escape>",lambda event: root.attributes("-fullscreen",False))
     #main.ask_questions()
     #survey.write_answers_to_file(answers)
     #main.pack(side="top", fill="both", expand=True)
