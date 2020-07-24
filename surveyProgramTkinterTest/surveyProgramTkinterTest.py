@@ -26,6 +26,7 @@ class Survey(tk.Frame):
         self.current_answer = StringVar()
         self.setup()
         self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
+        self.fullScreenBtn = Button(self.root, text='Enable Fullscreen Mode', command = self.enable_fullscreen)
 
  
     def readIn(self):
@@ -37,6 +38,7 @@ class Survey(tk.Frame):
         
         self.strtButton.configure(width = 102,height=2, activebackground = "#33B5E5", relief = RAISED)
         self.strtButton.place(relx=0.5,rely=0.9,anchor=CENTER)
+        self.fullScreenBtn.place(relx=0.01, rely=0.01)
         self.lbl_with_my_gif.place(relx=0.5,rely=0.4,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
         self.lbl_with_my_gif.configure(bg='black')#change background to match
         self.lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
@@ -111,13 +113,20 @@ class Survey(tk.Frame):
         self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
         self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
 
+    def enable_fullscreen(self):
+        self.root.attributes('-fullscreen', True)
+        self.fullScreenBtn.configure(text="Disable Fullscreen", command=self.disable_fullscreen)
+        #root.bind("<F11>",lambda event: root.attributes("-fullscreen", not root.attributes("-fullscreen")))
+        #root.bind("<Escape>",lambda event: root.attributes("-fullscreen",False))
+        
+    def disable_fullscreen(self):
+        self.root.attributes('-fullscreen', False)
+        self.fullScreenBtn.configure(text="Enable Fullscreen", command=self.enable_fullscreen)
 
 
 def main():
     root = tk.Tk()
-    #root.attributes('-fullscreen', True)
-    #root.bind("<F11>",lambda event: root.attributes("-fullscreen", not root.attributes("-fullscreen")))
-    #root.bind("<Escape>",lambda event: root.attributes("-fullscreen",False))
+    
     #main.ask_questions()
     #survey.write_answers_to_file(answers)
     #main.pack(side="top", fill="both", expand=True)
