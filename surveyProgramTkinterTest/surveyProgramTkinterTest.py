@@ -99,14 +99,14 @@ class Survey(tk.Frame):
     def resetValues(self):
         self.hide_question_components()
         self.strtButton.lift()
-        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/oop.gif', 0.03)  # (tkinter.parent, filename, delay between frames)
+        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/kawaii.gif', 0.03)  # (tkinter.parent, filename, delay between frames)
 
         
     def setup(self):
         self.count = 0
         self.answers = []
         self.easy_frame = Frame(self.canvas,bg="white")
-        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 50",bg="white")
+        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 50",bg="white", wraplength = 800)
         self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 102,height=2,)
         self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
         self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
