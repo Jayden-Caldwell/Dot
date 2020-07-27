@@ -47,7 +47,7 @@ import sys, glob # for listing serial ports
 try:
     import serial
 except ImportError:
-    tkMessageBox.showerror('Import error', 'Please install pyserial.')
+    messagebox.showerror('Import error', 'Please install pyserial.')
     raise
 
 connection = None
@@ -66,6 +66,9 @@ F\tFull
 C\tClean
 D\tDock
 R\tReset
+Z\tPower
+T\tSong
+K\tClock
 Space\tBeep
 Arrows\tMotion
 
@@ -120,7 +123,7 @@ class TetheredDriveApp(Tk):
 
         try:
             if connection is not None:
-                connection.write(command)
+                connection.write(command.encode())
             else:
                 messagebox.showerror('Not connected!', 'Not connected to a robot!')
                 print("Not connected.")
@@ -182,10 +185,16 @@ class TetheredDriveApp(Tk):
                 self.sendCommandASCII('135')
             elif k == 'D': # Dock
                 self.sendCommandASCII('143')
+            elif k == 'Z': # Power
+                self.sendCommandASCII('133')
             elif k == 'SPACE': # Beep
                 self.sendCommandASCII('140 3 1 64 16 141 3')
+            elif k == 'T': # Song
+                self.sendCommandASCII('141 5')
             elif k == 'R': # Reset
                 self.sendCommandASCII('7')
+            elif k == 'K': # Clock
+                self.sendCommandASCII('168 1 14 19')
             elif k == 'UP':
                 self.callbackKeyUp = True
                 motionChange = True
@@ -236,31 +245,31 @@ class TetheredDriveApp(Tk):
         global connection
 
         if connection is not None:
-            tkMessageBox.showinfo('Oops', "You're already connected!")
+            messagebox.showinfo('Oops', "You're already connected!")
             return
 
         try:
             ports = self.getSerialPorts()
-            port = tkSimpleDialog.askstring('Port?', 'Enter COM port to open.\nAvailable options:\n' + '\n'.join(ports))
+            port = simpledialog.askstring('Port?', 'Enter COM port to open.\nAvailable options:\n' + '\n'.join(ports))
         except EnvironmentError:
-            port = tkSimpleDialog.askstring('Port?', 'Enter COM port to open.')
+            port = simpledialog.askstring('Port?', 'Enter COM port to open.')
 
         if port is not None:
             print("Trying " + str(port) + "... ")
             try:
-                connection = serial.Serial(port, baudrate=115200, timeout=1)
+                connection = serial.Serial(port, baudrate= 57200, timeout=1)
                 print("Connected!")
-                tkMessageBox.showinfo('Connected', "Connection succeeded!")
+                messagebox.showinfo('Connected', "Connection succeeded!")
             except:
                 print("Failed.")
-                tkMessageBox.showinfo('Failed', "Sorry, couldn't connect to " + str(port))
+                messagebox.showinfo('Failed', "Sorry, couldn't connect to " + str(port))
 
 
     def onHelp(self):
-        tkMessageBox.showinfo('Help', helpText)
+        messagebox.showinfo('Help', helpText)
 
     def onQuit(self):
-        if tkMessageBox.askyesno('Really?', 'Are you sure you want to quit?'):
+        if messagebox.askyesno('Really?', 'Are you sure you want to quit?'):
             self.destroy()
 
     def getSerialPorts(self):
