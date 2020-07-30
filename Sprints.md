@@ -14,9 +14,9 @@ Once we installed python 2.7 and installed the py serial module with pip install
 
 JOEL broke the touchscreen!!! So we had to get a replacement.
 
-![image1](images/pipPyserial.png)
+![image1](images/pipPyserial.PNG)
 
-![image1](images/GUI.png)
+![image1](images/GUI.PNG)
 
 ## Video of Dot in action tethered to pc
 
