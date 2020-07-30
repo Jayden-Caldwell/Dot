@@ -7,7 +7,7 @@
 # http://www.irobot.com/
 #
 # Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
+# modification, are permittedprovided that the following conditions
 # are met:
 #
 #   Redistributions of source code must retain the above copyright
@@ -182,7 +182,9 @@ class TetheredDriveApp(Tk):
             elif k == 'D': # Dock
                 self.sendCommandASCII('143')
             elif k == 'SPACE': # Beep
-                self.sendCommandASCII('141 3 100')
+                self.sendCommandASCII('141 3')
+            elif k == 'O': # BOOB
+                self.sendCommandASCII('164 66 79 79 66')
             elif k == 'R': # Reset
                 self.sendCommandASCII('7')
             elif k == 'UP':
