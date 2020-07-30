@@ -5,7 +5,7 @@ layout: default
 Sprints
 =======
 
-### Sprint 1
+## Sprint 1
 
 Completed the prototype for the GUI using python with tkinter module. To get the gifs working we had to also download an animationGif module.
 
@@ -18,7 +18,7 @@ JOEL broke the touchscreen!!! So we had to get a replacement.
 
 ![image1](images/GUI.PNG)
 
-## Video of Dot in action tethered to pc
+### Video of Dot in action tethered to pc
 
 .....to be inserted by jayden....
 
