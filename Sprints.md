@@ -5,7 +5,7 @@ layout: default
 Sprints
 =======
 
-### Sprint 1
+## Sprint 1
 
 Completed the prototype for the GUI using python with tkinter module. To get the gifs working we had to also download an animationGif module.
 
@@ -14,11 +14,11 @@ Once we installed python 2.7 and installed the py serial module with pip install
 
 JOEL broke the touchscreen!!! So we had to get a replacement.
 
-![image1](images/pipPyserial.png)
+![image1](images/pipPyserial.PNG)
 
-![image1](images/GUI.png)
+![image1](images/GUI.PNG)
 
-## Video of Dot in action tethered to pc
+### Video of Dot in action tethered to pc
 
 .....to be inserted by jayden....
 
