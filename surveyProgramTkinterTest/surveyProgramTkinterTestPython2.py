@@ -12,7 +12,7 @@ import Tkinter as tk
 from Tkinter import *
 
 
-from AnimatedGif.AnimatedGif import AnimatedGif
+from AnimatedGif import AnimatedGif
 
     
 
@@ -76,7 +76,7 @@ class Survey(tk.Frame):
             
     
     def write_answers_to_file(self, answers):           #writes answers to csv
-        with open('answers.csv', 'a+', newline='') as write_obj:
+        with open('answers.csv', 'ab') as write_obj:
             writer = csv.writer(write_obj)
             #was throwing Error: iterable expected, not NoneType
             #added a try catch as it was working even with error, we should keep note however
