@@ -10,6 +10,8 @@ import pandas as pd
 import csv
 import Tkinter as tk
 from Tkinter import *
+import ttk
+
 
 
 from AnimatedGif import AnimatedGif
@@ -27,6 +29,7 @@ class Survey(tk.Frame):
         self.setup()
         self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
         self.fullScreenBtn = Button(self.root, text='Enable Fullscreen Mode', command = self.enable_fullscreen)
+
 
  
     def readIn(self):
@@ -50,6 +53,7 @@ class Survey(tk.Frame):
         self.nextQuestion.place(relx=0.5,rely=0.7,anchor=CENTER)
         self.yes_choice.place(relx=0.43,rely=0.45,anchor=CENTER)
         self.no_choice.place(relx=0.56,rely=0.45,anchor=CENTER)
+        self.bar.place(relx=0.5,rely=0.9,anchor=CENTER)
         self.root.mainloop()
         
 
@@ -57,7 +61,9 @@ class Survey(tk.Frame):
         self.answers.append(self.current_answer.get())
         print(self.answers)
         number_of_questions = len(self.questions)
+        self.bar['value'] = float(self.count+1)/number_of_questions*100
         self.count = self.count + 1
+        
         if self.count == number_of_questions:
             print("count == to number of questions")
                 #e.destroy()
@@ -71,6 +77,7 @@ class Survey(tk.Frame):
     
     def finish(self):
         self.write_answers_to_file(self.answers)
+        self.bar['value'] = 100
         self.ques.configure(text = "Thankyou for taking the time to complete this short survey")
         self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)           
             
@@ -108,6 +115,7 @@ class Survey(tk.Frame):
         self.count = 0
         self.answers = []
         self.easy_frame = Frame(self.canvas,bg="white")
+        self.bar = ttk.Progressbar(self.easy_frame, length=200, style='black.Horizontal.TProgressbar')
         self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 50",bg="white", wraplength = 800)
         self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 102,height=2,)
         self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
