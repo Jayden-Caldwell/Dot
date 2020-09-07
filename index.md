@@ -4,4 +4,4 @@ layout: default
 
 [Sprints](Sprints.md)
 
-What is Dot?
+![image1](images/switch_on.jpg) ![image2](images/switch_off.jpg)
