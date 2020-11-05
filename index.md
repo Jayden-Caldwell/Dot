@@ -4,6 +4,7 @@ layout: default
 
 [Sprints](Sprints.md)
 [GUI](GUI.md)
+[Hardware](Hardware.md)
 
 ### Building the component housing
 
