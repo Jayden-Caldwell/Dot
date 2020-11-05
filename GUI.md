@@ -1,5 +1,6 @@
 # Contents
 
+- [Home](index.md)
 - [Initial Prototype](#intitialprototype)
 - [UX Research](#uxresearch)
 
