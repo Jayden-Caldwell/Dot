@@ -8,13 +8,13 @@ Created on Tue Jul 21 13:19:22 2020
 from tkinter import *
 # keep the question in a separate json file
 q = [
-    "Capital of India",
-    "South most city in India",
+    "Do you like IT",
+    "What do you rate this out of 4",
 ]
 
 options = [
-    ["Delhi", "Mumbai", "Kolkata", "Chennai"],
-    ["Delhi", "Mumbai", "Chennai", "Kanyakumari"],
+    ["Yes", "No", "Dunno", "Skip"],
+    ["1", "2", "3", "4"],
 ]
 
 a = [1, 4]
