@@ -10,47 +10,47 @@ Initially when I satrted coding I was coding in python 3, but when the roomba wa
 
 for example:
 
-<img src="images/pythonCompare1.PNG" alt="drawing" width="200"/>
+<img src="images/pythonCompare1.PNG" alt="drawing" width="500"/>
 
 ## Tkinter
 
 To create the GUI I decided that I would try using Tkinter. I had never used it before so this was a big learning curve. To get me started I tried out some practice runs, trying to just get a basic GUI working. 
 
-<img src="images/tkinterPractice.PNG" alt="drawing" width="200"/>
+<img src="images/tkinterPractice.PNG" alt="drawing" width="500"/>
 
 I then started messing around with buttons showing different pages as I wasn't sure how I would be able to switch to each question.
 
-<img src="images/tkinterPractice1.PNG" alt="drawing" width="200"/>
+<img src="images/tkinterPractice1.PNG" alt="drawing" width="500"/>
 
 I also tried out just the most basic of quizes using Tkinter and went from there.
 
-<img src="images/tkinterPractice2.PNG" alt="drawing" width="200"/>
+<img src="images/tkinterPractice2.PNG" alt="drawing" width="500"/>
 
 ## The First Prototype
 
 ### Code
 
-<img src="images/guiCode1.PNG" alt="drawing" width="200"/>
-<img src="images/guiCode2.PNG" alt="drawing" width="200"/>
-<img src="images/guiCode3.PNG" alt="drawing" width="200"/>
+<img src="images/guiCode1.PNG" alt="drawing" width="500"/>
+<img src="images/guiCode2.PNG" alt="drawing" width="500"/>
+<img src="images/guiCode3.PNG" alt="drawing" width="500"/>
 
 ### GUI Screenshots
 
 #### Front Screen
 
-<img src="images/guiFront.PNG" alt="drawing" width="200"/>
+<img src="images/guiFront.PNG" alt="drawing" width="500"/>
 
 #### Question Screens
 
-<img src="images/guiFirstQues.PNG" alt="drawing" width="200"/>
+<img src="images/guiFirstQues.PNG" alt="drawing" width="500"/>
 
-<img src="images/guiHalf.PNG" alt="drawing" width="200"/>
+<img src="images/guiHalf.PNG" alt="drawing" width="500"/>
 
-<img src="images/guiLast.PNG" alt="drawing" width="200"/>
+<img src="images/guiLast.PNG" alt="drawing" width="500"/>
 
 #### End Screen
 
-<img src="images/guiGoodbye.PNG" alt="drawing" width="200"/>
+<img src="images/guiGoodbye.PNG" alt="drawing" width="500"/>
 
 Once you press goodbye it will take you to the first screen again so the next person can start.
 
