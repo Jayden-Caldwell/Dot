@@ -16,7 +16,7 @@ for example:
 
 To create the GUI I decided that I would try using Tkinter. I had never used it before so this was a big learning curve. To get me started I tried out some practice runs, trying to just get a basic GUI working. 
 
-<img src="images/tkinterPractice.PNG" alt="drawing" width="500"/>
+<img src="images/tkinterPractice.PNG" alt="drawing" width="800"/>
 
 I then started messing around with buttons showing different pages as I wasn't sure how I would be able to switch to each question.
 
@@ -30,9 +30,9 @@ I also tried out just the most basic of quizes using Tkinter and went from there
 
 ### Code
 
-<img src="images/guiCode1.PNG" alt="drawing" width="500"/>
-<img src="images/guiCode2.PNG" alt="drawing" width="500"/>
-<img src="images/guiCode3.PNG" alt="drawing" width="500"/>
+<img src="images/guiCode1.PNG" alt="drawing" width="800"/>
+<img src="images/guiCode2.PNG" alt="drawing" width="800"/>
+<img src="images/guiCode3.PNG" alt="drawing" width="800"/>
 
 ### GUI Screenshots
 
