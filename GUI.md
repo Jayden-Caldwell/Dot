@@ -10,13 +10,13 @@ Initially when I satrted coding I was coding in python 3, but when the roomba wa
 
 for example:
 
-<img src="images/pythonCompare1.PNG" alt="drawing" width="500"/>
+<img src="images/pythonCompare1.PNG" alt="drawing" width="800"/>
 
 ## Tkinter
 
 To create the GUI I decided that I would try using Tkinter. I had never used it before so this was a big learning curve. To get me started I tried out some practice runs, trying to just get a basic GUI working. 
 
-<img src="images/tkinterPractice.PNG" alt="drawing" width="800"/>
+<img src="images/tkinterPractice.PNG" alt="drawing" width="500"/>
 
 I then started messing around with buttons showing different pages as I wasn't sure how I would be able to switch to each question.
 
