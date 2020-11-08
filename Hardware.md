@@ -15,3 +15,8 @@ Soldiering was very important for the project as we needed to supply our raspber
 # Component Housing
 To store our Raspberry pi, voltage converter and battery we created a sketch and 3D printed a holder, this can be seen below. After we put this together, we decided to wire in a switch so you could use that to turn the voltage converter on and off and in doing so the Raspberry pi and the touch screen.
 
+<img src="images/switch_on.jpg" alt="drawing" width="200"/> <img src="images/switch_off.jpg" alt="drawing" width="200"/> <img src="images/Capture1.JPG" alt="drawing" width="400"/>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aqs5S3J1gq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
