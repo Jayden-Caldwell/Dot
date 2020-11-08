@@ -17,7 +17,7 @@ To store our Raspberry pi, voltage converter and battery we created a sketch and
 
 The pictures above show the component housing in its 2 states, on and off. The other image is of the prototype that was to be 3D printed. The idea was to separate each component to make it look cleaner and to give us some space to route cables. It was not until after all the components were installed that we decided to put in a switch, but this was great idea.    
 
-###Here is a video of the switch in action:
+### Here is a video of the switch in action:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aqs5S3J1gq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
