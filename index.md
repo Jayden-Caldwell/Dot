@@ -10,6 +10,10 @@ layout: default
 [Design](robot-design.md) |
 [Reflections](reflections.md)
 
+
+
+<img src="images/groupPhoto.jpg" width="200"/>
+
 ### Building the component housing
 
 
