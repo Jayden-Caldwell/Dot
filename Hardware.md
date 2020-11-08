@@ -34,7 +34,11 @@ A big part of our project relied on the 3D printers such as girders, mounts, hol
 
 <img src="images/screenHolder7.jpg" alt="drawing" width="400"/>
 
+- Below is the process from start to finish of the screen holder being printed.
+
 <img src="images/screenHolder4.jpg" alt="drawing" width="200"/> <img src="images/screenHolder5.jpg" alt="drawing" width="200"/> <img src="images/screenHolder6.jpg" alt="drawing" width="200"/>
+
+- This is Dot one we had the touch screen mounted to the holder and attached it to Dot.
 
 <img src="images/screenHolder1.jpg" alt="drawing" width="400"/> <img src="images/screenHolder2.jpg" alt="drawing" width="200"/> <img src="images/screenHolder3.jpg" alt="drawing" width="400"/>
 
