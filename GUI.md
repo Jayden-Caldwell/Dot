@@ -1,4 +1,4 @@
-[Home](index.md)
+[Home](index.md) |
 [Hardware Plan](hardware-plan.md) |
 [Hardware](Hardware.md) |
 [Graphical User Interface](GUI.md) |
