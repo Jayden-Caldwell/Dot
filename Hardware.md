@@ -1,8 +1,6 @@
 # Contents
 
 - [Home](index.md)
-- [Intoduction](#Intoduction)
-- [UX Research](#uxresearch)
 
 # Intoduction
 Hardware makes up a large portion of our robotics project from 3D printing, soldering, drilling, building and much more. Below I demonstrate the key things that we did that outline what we learnt whether they work or were a disaster.
