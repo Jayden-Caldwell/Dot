@@ -1,10 +1,11 @@
+# Human Interaction
+
 ## Contents
 - [Human Interaction](#human-interaction)
   * [Human Safety](#human-safety)
   * [Communication](#communication)
   * [Approaching Humans](#approaching-humans)
   
-## Human Interaction
 
 ### Human Safety
 
