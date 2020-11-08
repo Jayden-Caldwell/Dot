@@ -26,6 +26,10 @@ The pictures above show the component housing in its 2 states, on and off. The o
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aqs5S3J1gq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# 3D Printing
+
+A big part of our project relied on the 3D printers such as girders, mounts, holders and the component housing. Some of this didn’t go as planned. The girders were printed off earlier in semester when we weren’t having issues with the printers, but this quickly changed. After that a lot of our prints were interrupted by either the filament snapping or the nozzle blocking and with the Dremel if this happened the head needed to be pulled apart which took a few hours. This was diffidently a big road block in our overall productivity, especially when some of the items we were printing were taking 12 hours at a time and if anything was to go wrong during this process you would have to start from scratch again. 
+
 <img src="images/screenHolder7.jpg" alt="drawing" width="400"/>
 
 <img src="images/screenHolder4.jpg" alt="drawing" width="200"/> <img src="images/screenHolder5.jpg" alt="drawing" width="200"/> <img src="images/screenHolder6.jpg" alt="drawing" width="200"/>
