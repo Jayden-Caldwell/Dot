@@ -1,6 +1,10 @@
-# Contents
-
-- [Home](index.md)
+[Home](index.md) |
+[Hardware Plan](hardware-plan.md) |
+[Hardware](Hardware.md) |
+[Graphical User Interface](GUI.md) |
+[Human Interaction](human-interaction.md) |
+[Design](robot-design.md) |
+[Reflections](reflections.md)
 
 # Intoduction
 Hardware makes up a large portion of our robotics project from 3D printing, soldering, drilling, building and much more. Below I demonstrate the key things that we did that outline what we learnt whether they work or were a disaster.
