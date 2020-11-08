@@ -1,3 +1,5 @@
+# Robot design
+
 ## Contents
 - [Robot Design](#robot-design)
   * [Common features](#common-features-in-human-interacting-robots)
@@ -5,8 +7,6 @@
   * [How these apply to Dot](#how-these-apply-to-dot)
   * [Example videos](#some-videos-showing-human-robot-interaction)
   
-
-## Robot design
 
 ### Common features in human-interacting robots
 * White in colour
