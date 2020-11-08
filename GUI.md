@@ -1,19 +1,27 @@
-# Contents
+[Home](index.md)
+[Hardware Plan](hardware-plan.md) |
+[Hardware](Hardware.md) |
+[Graphical User Interface](GUI.md) |
+[Human Interaction](human-interaction.md) |
+[Design](robot-design.md) |
+[Reflections](reflections.md)
 
-- [Home](index.md)
+# Graphical User Interface
+
+### Contents
 - [Initial Prototype](#intitialprototype)
 - [UX Research](#uxresearch)
 
-# Initial Prototype
+## Initial Prototype
 
-## Language
+### Language
 Initially when I satrted coding I was coding in python 3, but when the roomba was not working we realised that it would only work in python 2.7. I then had to convert the GUI code to python 2.7.
 
 for example:
 
 <img src="images/pythonCompare1.PNG" alt="drawing" width="800"/>
 
-## Tkinter
+### Tkinter
 
 To create the GUI I decided that I would try using Tkinter. I had never used it before so this was a big learning curve. To get me started I tried out some practice runs, trying to just get a basic GUI working. 
 
@@ -27,21 +35,21 @@ I also tried out just the most basic of quizes using Tkinter and went from there
 
 <img src="images/tkinterPractice2.PNG" alt="drawing" width="500"/>
 
-## The First Prototype
+### The First Prototype
 
-### Code
+#### Code
 
 <img src="images/guiCode1.PNG" alt="drawing" width="800"/>
 <img src="images/guiCode2.PNG" alt="drawing" width="800"/>
 <img src="images/guiCode3.PNG" alt="drawing" width="800"/>
 
-### GUI Screenshots
+#### GUI Screenshots
 
-#### Front Screen
+##### Front Screen
 
 <img src="images/guiFront.PNG" alt="drawing" width="500"/>
 
-#### Question Screens
+##### Question Screens
 
 <img src="images/guiFirstQues.PNG" alt="drawing" width="500"/>
 
@@ -49,24 +57,24 @@ I also tried out just the most basic of quizes using Tkinter and went from there
 
 <img src="images/guiLast.PNG" alt="drawing" width="500"/>
 
-#### End Screen
+##### End Screen
 
 <img src="images/guiGoodbye.PNG" alt="drawing" width="500"/>
 
 Once you press goodbye it will take you to the first screen again so the next person can start.
 
 ----------------------
-# UX Research
+## UX Research
 
-## Three UX research techniques I chose
+### Three UX research techniques I chose
 -
-### Competitive Analysis
+#### Competitive Analysis
 
 Competitive analysis provides an overview of the current state of the market by allowing you to examine and compare your User Interface with similar products that are already out in the market. The focus of competitive analysis is User Experience.
 
 I believe this is suited to my situation as I can compare my User Interface with other products to see how my User Experience could be improved to suit and compete in the current market. This research would also be useful as a guide of what people would expect to see in a survey User Interface.
 
-### Design Review – Standalone Design Critique
+#### Design Review – Standalone Design Critique
 
 A design review is a _usability-inspection method in which a reviewer examines a design to identify usability problems [nngroup.com]._ There are several different methods of design review including Heuristic Evaluation, Standalone Design Critique and expert Review. I chose to focus on Standalone Design Critique.
 
@@ -74,7 +82,7 @@ Standalone Design Critique is a method of Design Review where an in-progress des
 
 I chose this method of design review as I believe that it would be extremely beneficial to get my fellow group members perspective of my initial design of the User Interface. They will be able to input their ideas which I may not have thought of or see features that should be improved on to improve the User Experience of our product.
 
-### Prototype Feedback &amp; Testing (clickable prototype)
+#### Prototype Feedback &amp; Testing (clickable prototype)
 
 Prototype Feedback and Testing can be done on paper prototypes or clickable prototypes. I have chosen to use my current prototype that I have coded. The clickable prototype will allow the user the full experience of using the actual product.
 
@@ -82,19 +90,19 @@ Prototype Feedback and Testing, requires you to watch users use your prototype. 
 
 This method of User Experience Research fits well with where I am at in the design process of my User Interface. I have completed the first clickable prototype so this would be the perfect opportunity to see how users react to using it. I can then see where I need to improve my design to make the User Experience better for the user.
 
-## Perform each technique and document how you went about using that technique
+### Perform each technique and document how you went about using that technique
 
-### Competitive Analysis
+#### Competitive Analysis
 
 To correctly perform the Competitive Analysis method for my User Experience research on my product I found a template of how to proceed and the questions I should be answering in this research technique. This site had great in-depth information on each step that should be taken. I will be comparing my product with survey tools and user interfaces that are predominantly web based which will give me a broader spectrum of products to compare with, as comparing it to another robot that has a survey interface will be harder to find and make comparisons with. As I am focusing mainly on the survey portion of the project I believe this is the correct path to take.
 
 Below are the steps that I took to complete this research technique.
 
-#### Outline my goals and define my product:
+##### Outline my goals and define my product:
 
 The goal of this research is to compare the qualities, strengths and weaknesses of my product, compared to others that are already on the market.
 
-#### Compile a list of direct and indirect competition:
+##### Compile a list of direct and indirect competition:
 
 **Direct Competition** (High Priority)
 
@@ -108,7 +116,7 @@ The goal of this research is to compare the qualities, strengths and weaknesses 
 
 - [Quibblo](https://www.quibblo.com/take/survey): A site that you can take random surveys at. Has a very basic User Interface.
 
-#### Create a list of features compare:
+##### Create a list of features compare:
 
 | **Feature** | [**Survey Monkey**](https://www.surveymonkey.com/) | [**TypeForm**](https://www.typeform.com/surveys/) | [**Zoho**](https://survey.zoho.com.au/) | [**freeonlinesurveys**](https://freeonlinesurveys.com/) | [**Google Forms**](https://docs.google.com/forms/u/0/) | [**Quibblo**](https://www.quibblo.com/take/survey) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -133,7 +141,7 @@ The goal of this research is to compare the qualities, strengths and weaknesses 
 | **Splash Screen** | No
  | Yes – title of survey, button tell us what you think | No | No | No | No |
 
-#### Identify the differences between my product and competitors
+##### Identify the differences between my product and competitors
 
 | **Feature** |
  |
@@ -149,7 +157,7 @@ The goal of this research is to compare the qualities, strengths and weaknesses 
 
 I will Summarize my findings and devise my strategies in the next section of this report in &quot;[Document the results of your research](#_Competitive_Analysis)&quot;
 
-### Design Review – Standalone Design Critique
+#### Design Review – Standalone Design Critique
 
 I decided to have the design critique with my other group members in my project. The first thing I did was let everyone know the objective of the discussion so that everyone knew what was to be discussed. I explained that I would present the prototype User Interface and that they would take turns, using the round robin technique, to either share something good about the design, or some aspect of the design that they feel could be improved.
 
@@ -159,7 +167,7 @@ While presenting, I explained what parts of the prototype are placeholders for t
 
 I will discuss the good design features, and features that could be improved upon, during the design critique in the next section of this report in &quot;[Document the results of your research](#_Design_Review_%E2%80%93)&quot;.
 
-### Prototype Feedback &amp; Testing (clickable prototype)
+#### Prototype Feedback &amp; Testing (clickable prototype)
 
 For the testing I decided that it would be best to do the unmoderated approach, which for me meant sitting down with the user and allowing them to use the prototype without any input from me. I had three people use my prototype, which gave me a little more perspective on what I should improve for the next iteration.
 
@@ -169,9 +177,9 @@ If I had more time I feel it would have been very constructive to find more peop
 
 I will discuss my findings in the next section of this report in &quot;[Document the results of your research](#_Prototype_Feedback_&amp;)&quot;.
 
-## Results of research
+### Results of research
 
-### Competitive Analysis
+#### Competitive Analysis
 
 Through my thorough research of other similar products online I found that a lot of the online products shared the same qualities including;
 
@@ -192,24 +200,24 @@ I have found multiple User Experience problems with my User Interface by doing t
 - My product has a lot of pointless screens at the end of it and button clicks that don&#39;t need to be there. I believe I should change it to a Submit button on the final question and a screen that says thankyou to the user, then after 5 seconds it should automatically go back to the starting splash screen.
 - Though many products do not have a splash screen I believe that this is also a feature I do not want to take away from my product. The products that did have a splash screen that I researched felt nicer than the ones that did not.
 
-### Design Review – Standalone Design Critique
+#### Design Review – Standalone Design Critique
 
 During the design critique several good and bad features of my prototype design were addressed including;
 
-#### Good features:
+##### Good features:
 
 - The Progress Bar was a great addition and the placement was in a position that made sense to the rest of the layout.
 - The full screen button was a good idea as it enabled users to easily enable and disable the full screen on a touch screen without the use of a keyboard.
 - Having everything centered draws the user in so they can see all the important information.
 
-#### Features to improve on:
+##### Features to improve on:
 
 - The progress bar would be better if it had some sort of text either inside or next to it to further indicate to users what it was calculating.
 - The full screen button might make more sense to be on the right side of the screen as that is where users would usually go to maximize a window.
 - The next and start buttons seemed off balance with the rest of the layout, they might be better shorter lengthways but have a larger height to make it easier for the user to hit with their finger.
 - The extra screen at the end that requires a button push to get back to the splash screen meant that users may just leave and not realize they had one more button to push, leaving the survey not ready for another person to start.
 
-### Prototype Feedback &amp; Testing (clickable prototype)
+#### Prototype Feedback &amp; Testing (clickable prototype)
 
 During the testing most of the users found the same problems or got stuck on a few of the same parts of my prototype;
 
@@ -233,7 +241,7 @@ On the very first question the progress bar is just an empty rectangle at the bo
 
 On the final screen the yes and no radio buttons are still there even though they are not actually being used at this point of the survey. This made for a little bit of confusion so I should remove them from that screen for the next iteration of my prototype.
 
-## References
+### References
 
 _Design Critiques:__Encourage a Positive Culture to Improve Products_. (2020). Retrieved 25 August 2020, from [https://www.nngroup.com/articles/design-critiques/](https://www.nngroup.com/articles/design-critiques/)
 
