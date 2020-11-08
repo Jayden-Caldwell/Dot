@@ -30,6 +30,6 @@ The pictures above show the component housing in its 2 states, on and off. The o
 
 <img src="images/screenHolder4.jpg" alt="drawing" width="200"/> <img src="images/screenHolder5.jpg" alt="drawing" width="200"/> <img src="images/screenHolder6.jpg" alt="drawing" width="200"/>
 
-<img src="images/screenHolder1.jpg" alt="drawing" width="150" height="150"/>
+<img src="images/screenHolder1.jpg" alt="drawing" width="500"/>
 <img src="images/screenHolder2.jpg" alt="drawing" width="200"/>
 <img src="images/screenHolder3.jpg" alt="drawing" width="200"/>
