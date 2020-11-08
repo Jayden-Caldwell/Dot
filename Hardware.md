@@ -41,6 +41,8 @@ A big part of our project relied on the 3D printers such as girders, mounts, hol
 - This is Dot once we had the touch screen mounted to the holder and attached it to Dot.
 
 <img src="images/screenHolder1.jpg" alt="drawing" width="400"/>
+
 <img src="images/screenHolder2.jpg" alt="drawing" width="200"/>
+
 <img src="images/screenHolder3.jpg" alt="drawing" width="400"/>
 
