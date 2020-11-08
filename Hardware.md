@@ -26,3 +26,10 @@ The pictures above show the component housing in its 2 states, on and off. The o
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aqs5S3J1gq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<img src="images/screenHolder1.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder2.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder3.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder4.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder5.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder6.jpg" alt="drawing" width="200"/>
+<img src="images/screenHolder7.jpg" alt="drawing" width="200"/>
