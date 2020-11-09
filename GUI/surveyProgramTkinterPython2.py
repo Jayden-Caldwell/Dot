@@ -27,7 +27,7 @@ class Survey(tk.Frame):
         self.canvas = canvas
         self.current_answer = StringVar()
         self.setup()
-        self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
+        #self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
         self.fullScreenBtn = Button(self.root, text='Enable Fullscreen Mode', command = self.enable_fullscreen)
 
 
@@ -39,12 +39,13 @@ class Survey(tk.Frame):
     def startScreen(self):
         self.resetValues()
         
-        self.strtButton.configure(width = 50,height=5, activebackground = "#33B5E5", relief = RAISED)
-        self.strtButton.place(relx=0.5,rely=0.8,anchor=CENTER)
+        #self.strtButton.configure(width = 50,height=5, activebackground = "#33B5E5", relief = RAISED)
+        #self.strtButton.place(relx=0.5,rely=0.8,anchor=CENTER)
         self.fullScreenBtn.place(relx=0.01, rely=0.01)
-        self.lbl_with_my_gif.place(relx=0.5,rely=0.4,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
+        self.lbl_with_my_gif.place(relx=0.5,rely=0.5,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
         self.lbl_with_my_gif.configure(bg='black')#change background to match
         self.lbl_with_my_gif.start()  # Shows gif at first frame and we are ready to go
+        self.lbl_with_my_gif.bind("<Button-1>", self.leftclick)
         
         
     def ask_questions(self):#asks questions
@@ -95,7 +96,7 @@ class Survey(tk.Frame):
             
 
     def hide_and_start(self):
-        self.strtButton.lower()
+        #self.strtButton.lower()
         self.setup()
         self.lbl_with_my_gif.destroy()
         self.ask_questions()
@@ -107,8 +108,8 @@ class Survey(tk.Frame):
     
     def resetValues(self):
         self.hide_question_components()
-        self.strtButton.lift()
-        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/somethingWrong.gif', 0.03)  # (tkinter.parent, filename, delay between frames)
+        #self.strtButton.lift()
+        self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/happyOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
 
         
     def setup(self):
@@ -130,6 +131,10 @@ class Survey(tk.Frame):
     def disable_fullscreen(self):
         self.root.attributes('-fullscreen', False)
         self.fullScreenBtn.configure(text="Enable Fullscreen", command=self.enable_fullscreen)
+
+    def leftclick(self,event):
+        print("left")
+        self.hide_and_start()
 
 
 def main():
