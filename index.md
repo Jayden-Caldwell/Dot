@@ -12,7 +12,7 @@ layout: default
 
 
 
-<img src="images/groupPhoto.jpg" width="200"/>
+<img src="images/groupPhoto.jpg"/>
 
 ### Building the component housing
 
