@@ -11,6 +11,7 @@
 ### Contents
 - [Initial Prototype](#intitialprototype)
 - [UX Research](#uxresearch)
+- [Final Preperations](#final-preparations)
 
 ## Initial Prototype
 
@@ -248,3 +249,10 @@ _Design Critiques:__Encourage a Positive Culture to Improve Products_. (2020). R
 _The Complete Guide to a UX Competitive Analysis | WANDR - Ranked #1 Product Strategy &amp; UX Design Firm_. (2020). Retrieved 25 August 2020, from [https://wandr.studio/competitive-analysis-ux/](https://wandr.studio/competitive-analysis-ux/)
 
 _UX Research Cheat Sheet._ (2020). Retrieved 25 August 2020, from https://www.nngroup.com/articles/ux-research-cheat-sheet/
+
+
+
+## Final Preparations
+
+- Joel created some GIF's to be used as DOT's face but they were not working with my program. I found a GIF optimiser online and managed to drop duplicate frames from the GIF's. This made them work perfectly with my program.
+
