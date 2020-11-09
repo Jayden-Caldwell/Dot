@@ -256,3 +256,18 @@ _UX Research Cheat Sheet._ (2020). Retrieved 25 August 2020, from https://www.nn
 
 - Joel created some GIF's to be used as DOT's face but they were not working with my program. I found a GIF optimiser online and managed to drop duplicate frames from the GIF's. This made them work perfectly with my program.
 
+- Tried to use Text to Speech API from IBM Watson but the are no longer supporting Python 2.7. Instead I found another tts system that uses the platforms tts. I have manged to get it working on windows but may have to do a few different things to get it working on the Rasp Pi.
+
+<img src="images/ttsHelp.PNG" alt="drawing" width="500"/>
+
+I also had to install some more dependencies to get it working:
+
+<img src="images/ttsToWorkOnWindows.PNG" alt="drawing" width="500"/>
+
+- I have incorperated two of joels GIFs one at the start and then one at the end:
+
+<img src="images/happyStart.PNG" alt="drawing" width="500"/>
+<img src="images/loveEnd.PNG" alt="drawing" width="500"/>
+
+
+
