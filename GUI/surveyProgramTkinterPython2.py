@@ -31,6 +31,7 @@ class Survey(tk.Frame):
         self.fullScreenBtn = Button(self.root, text='Enable Fullscreen Mode', command = self.enable_fullscreen)
 
 
+
  
     def readIn(self):
         self.questions = pd.read_csv(self.file)         #reads in the questions file
@@ -78,9 +79,16 @@ class Survey(tk.Frame):
     
     def finish(self):
         self.write_answers_to_file(self.answers)
-        self.bar['value'] = 100
-        self.ques.configure(text = "Thankyou for taking the time to complete this short survey")
-        self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)           
+        #self.bar['value'] = 100
+        #self.ques.configure(text = "Thankyou for taking the time to complete this short survey")
+        
+        self.hide_question_components()
+        self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
+        self.lbl_finish_gif.place(relx=0.5,rely=0.5,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
+        self.lbl_finish_gif.configure(bg='black')#change background to match
+        self.lbl_finish_gif.start()  # Shows gif at first frame and we are ready to go
+        self.lbl_finish_gif.bind("<Button-1>", self.restart)
+        #self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)           
             
     
     def write_answers_to_file(self, answers):           #writes answers to csv
@@ -107,8 +115,9 @@ class Survey(tk.Frame):
     
     
     def resetValues(self):
-        self.hide_question_components()
+        #self.hide_question_components()
         #self.strtButton.lift()
+        self.lbl_finish_gif.destroy()
         self.lbl_with_my_gif = AnimatedGif(self.root, 'emotions/happyOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
 
         
@@ -121,6 +130,8 @@ class Survey(tk.Frame):
         self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 102,height=2,)
         self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
         self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
+        self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
+
 
     def enable_fullscreen(self):
         self.root.attributes('-fullscreen', True)
@@ -135,6 +146,10 @@ class Survey(tk.Frame):
     def leftclick(self,event):
         print("left")
         self.hide_and_start()
+
+    def restart(self,event):
+        print("left")
+        self.startScreen()
 
 
 def main():
