@@ -11,6 +11,8 @@ import csv
 import Tkinter as tk
 from Tkinter import *
 import ttk
+import pyttsx
+import time
 
 
 
@@ -77,20 +79,31 @@ class Survey(tk.Frame):
             self.ques.configure(text =self.questions["question"][self.count])
             
     
-    def finish(self):
+    def finish(self):#shows thankyou love gif
         self.write_answers_to_file(self.answers)
         #self.bar['value'] = 100
         #self.ques.configure(text = "Thankyou for taking the time to complete this short survey")
-        
         self.hide_question_components()
-        self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
+        self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.3)  # (tkinter.parent, filename, delay between frames)
         self.lbl_finish_gif.place(relx=0.5,rely=0.5,anchor=CENTER)# Packing the label with the animated gif (grid works just as well)
         self.lbl_finish_gif.configure(bg='black')#change background to match
         self.lbl_finish_gif.start()  # Shows gif at first frame and we are ready to go
-        self.lbl_finish_gif.bind("<Button-1>", self.restart)
-        #self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)           
-            
-    
+        self.lbl_finish_gif.bind("<Button-1>", self.restart)     
+        #self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)
+        self.tts()
+        #time.wait(15)
+        #self.startScreen()
+        
+        
+    def tts(self):
+        #trying out tts
+        engine = pyttsx.init()
+        engine.setProperty('voice', u'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_ZIRA_11.0')
+        engine.say("Thankyou so much!")
+        engine.runAndWait()
+        engine.stop()
+        print("talk")
+        
     def write_answers_to_file(self, answers):           #writes answers to csv
         with open('answers.csv', 'ab') as write_obj:
             writer = csv.writer(write_obj)
