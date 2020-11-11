@@ -12,9 +12,9 @@
 - [Hardware](#hardware)
   * [Intoduction](#Intoduction)
   * [Solder](#Solder)
-  * [Component Housing](#Component Housing)
-  * [3D Printing](#3D Printing)
-  * [Final Product](#Final Product)
+  * [Component Housing](#Component-Housing)
+  * [3D Printing](#3D-Printing)
+  * [Final Product](#Final-Product)
 
 # Intoduction
 Hardware makes up a large portion of our robotics project from 3D printing, soldering, drilling, building and much more. Below I demonstrate the key things that we did that outline what we learnt whether they work or were a disaster.
