@@ -68,3 +68,18 @@ A big part of our project relied on the 3D printers such as girders, mounts, hol
 # Final Product
 
 Although we are not happy as a group with what we have achieved with Dot we have to take into perspective that we only just started tinkering with Dot at the start of second semester. We had no idea what was instore for us with the IRobot and how it would function until we dug deeper into it. We managed to come a tremendous distance so I feel we should be proud of what progress we achieved. Our final build consists of our robot being able to be driven using a small controller. Its foundation is the IRobot itself and from that we build a frame using 3D printed girders. In total we used 12 girders which we build a box as support. On top of this box is where the component housing sits with all the electronics encased inside. Infront of this is where the screen mount it fitted. Everything is currently held together using hot glue and a silicon-based glue. This makes the overall structure weak but it was only planned as the prototype. Our final goal was to get into contact with the engineering department and build a shell that would cover Dot using vacuum forming.  
+
+### Our First Prototype
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pg-UxSkUzbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Dot Connected to the PC - Driving
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cig6YJdfmE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+### Dot Connected to Pi - Driving 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RwA-9RwSWeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
