@@ -22,24 +22,6 @@ layout: default
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aqs5S3J1gq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Dot Connected to the PC - Driving
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cig6YJdfmE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-### Dot Connected to Pi - Driving 
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RwA-9RwSWeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-### Our First Prototype
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Pg-UxSkUzbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 ### 3D Printing
 
