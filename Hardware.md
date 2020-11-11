@@ -6,6 +6,16 @@
 [Design](robot-design.md) |
 [Reflections](reflections.md)
 
+# Hardware
+
+## Contents
+- [Hardware](#hardware)
+  * [Intoduction](#Intoduction)
+  * [Solder](#Solder)
+  * [Component Housing](#Component Housing)
+  * [3D Printing](#3D Printing)
+  * [Final Product](#Final Product)
+
 # Intoduction
 Hardware makes up a large portion of our robotics project from 3D printing, soldering, drilling, building and much more. Below I demonstrate the key things that we did that outline what we learnt whether they work or were a disaster.
 
@@ -55,5 +65,5 @@ A big part of our project relied on the 3D printers such as girders, mounts, hol
 
 <img src="images/screenHolder3.jpg" alt="drawing" width="400"/>
 
-
+# Final Product
 
