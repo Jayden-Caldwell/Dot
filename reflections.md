@@ -23,7 +23,7 @@ Once lockdown was taken down to level 2, we could access the building and the eq
 
 Our plan for next semester is to get the raspberry PI talking to the Roomba by following a tutorial online. Once this is working, we would have a better understanding on how we are going to achieve what we set out to do. Overall, we feel that this semester we tried our best considering the circumstances and we will start next semester fresh and ready to achieve greatness.
 
-## Project One
+## Project Two
 
 ## Time management: 
 
