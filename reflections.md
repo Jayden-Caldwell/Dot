@@ -40,10 +40,9 @@ We were always willing to work on assigned tasks.
 
 Everyone contributed equally and everyone was a key member to the success of the team.
 
- ## Conclusion
+## Conclusion
 We are happy with what we achieved this semester even though we didn’t get as far through the project as we would have liked to. We feel that if we had more time on project and one less paper to work on, we would have been much further than we are currently. Regardless we feel we are leaving a good foundation for the next team to take our project to the next level in development.
 
-LETS 
 ---
 ## References
 Azarian, B. (2016, April 13). Designing Robots That Avoid The Uncanny Valley. Retrieved from [https://www.psychologytoday.com/us/blog/mind-in-the-machine/201604/designing-robots-avoid-the-uncanny-valley](https://www.psychologytoday.com/us/blog/mind-in-the-machine/201604/designing-robots-avoid-the-uncanny-valley)
