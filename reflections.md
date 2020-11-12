@@ -23,6 +23,27 @@ Once lockdown was taken down to level 2, we could access the building and the eq
 
 Our plan for next semester is to get the raspberry PI talking to the Roomba by following a tutorial online. Once this is working, we would have a better understanding on how we are going to achieve what we set out to do. Overall, we feel that this semester we tried our best considering the circumstances and we will start next semester fresh and ready to achieve greatness.
 
+## Project One
+
+## Time management: 
+
+At the beginning we tried to get as much done as possible because we knew we were going to be busy towards the end of the semester. We always took advantage of our project time to get together as a team and work on our project. We tried our best at the start of the semester to do sprints, but after the first three sprints that started to trail off. When we stopped doing sprints, we were still making plans and ourselves timeframes to get things completed by.
+
+## Communication:
+
+Our communication has always been exceptional as we use Facebook Messenger, so we are always in contact. If there was an issue it would be resolved quickly. We were always present at meetings and equally contributed. If someone was going to be absent, they would let the team know via Messenger.
+## Motivation:
+
+We were always willing to work on assigned tasks.
+
+## Contribution:
+
+Everyone contributed equally and everyone was a key member to the success of the team.
+
+ ## Conclusion
+We are happy with what we achieved this semester even though we didn’t get as far through the project as we would have liked to. We feel that if we had more time on project and one less paper to work on, we would have been much further than we are currently. Regardless we feel we are leaving a good foundation for the next team to take our project to the next level in development.
+
+LETS 
 ---
 ## References
 Azarian, B. (2016, April 13). Designing Robots That Avoid The Uncanny Valley. Retrieved from [https://www.psychologytoday.com/us/blog/mind-in-the-machine/201604/designing-robots-avoid-the-uncanny-valley](https://www.psychologytoday.com/us/blog/mind-in-the-machine/201604/designing-robots-avoid-the-uncanny-valley)
