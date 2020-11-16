@@ -11,8 +11,8 @@ import csv
 import Tkinter as tk
 from Tkinter import *
 import ttk
-import pyttsx
-import time
+#import pyttsx
+#import time
 
 
 
@@ -90,7 +90,7 @@ class Survey(tk.Frame):
         self.lbl_finish_gif.start()  # Shows gif at first frame and we are ready to go
         self.lbl_finish_gif.bind("<Button-1>", self.restart)     
         #self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)
-        self.tts()
+        #self.tts()
         #time.wait(15)
         #self.startScreen()
         
