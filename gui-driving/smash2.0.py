@@ -13,12 +13,54 @@ from Tkinter import *
 import ttk
 #import pyttsx
 #import time
+from Tkinter import *
+import tkMessageBox
+import tkSimpleDialog
+
+import struct
+import sys, glob # for listing serial ports
+
+try:
+    import serial
+except ImportError:
+    tkMessageBox.showerror('Import error', 'Please install pyserial.')
+    raise
+
+connection = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=1)
+#connectuon = None
+
+TEXTWIDTH = 40 # window width, in characters
+TEXTHEIGHT = 16 # window height, in lines
+
+VELOCITYCHANGE = 200
+ROTATIONCHANGE = 300
+
+helpText = """\
+Supported Keys:
+P\tPassive
+S\tSafe
+F\tFull
+C\tClean
+D\tDock
+R\tReset
+Space\tBeep
+Arrows\tMotion
+
+If nothing happens after you connect, try pressing 'P' and then 'S' to get into safe mode.
+"""
 
 from AnimatedGif import AnimatedGif
 
     
 
 class Survey(tk.Frame):
+    # static variables for keyboard callback -- I know, this is icky
+    callbackKeyUp = False
+    callbackKeyDown = False
+    callbackKeyLeft = False
+    callbackKeyRight = False
+    callbackKeyLastDriveCommand = ''
+    
     def __init__(self, file, root, canvas):
         self.file = file
         self.questions = []
@@ -29,9 +71,9 @@ class Survey(tk.Frame):
         self.setup()
         #self.strtButton = Button(self.root, text='Start',command = self.hide_and_start) 
         self.fullScreenBtn = Button(self.root, text='Enable Fullscreen Mode', command = self.enable_fullscreen)
-
-
-
+        
+        self.root.bind("<Key>", self.callbackKey)
+        self.root.bind("<KeyRelease>", self.callbackKey)
  
     def readIn(self):
         self.questions = pd.read_csv(self.file)         #reads in the questions file
@@ -161,6 +203,131 @@ class Survey(tk.Frame):
     def restart(self,event):
         print("left")
         self.startScreen()
+
+    # sendCommandASCII takes a string of whitespace-separated, ASCII-encoded base 10 values to send
+    def sendCommandASCII(self, command):
+        cmd = ""
+        for v in command.split():
+            cmd += chr(int(v))
+
+        self.sendCommandRaw(cmd)
+
+    # sendCommandRaw takes a string interpreted as a byte array
+    def sendCommandRaw(self, command):
+        global connection
+
+        try:
+            if connection is not None:
+                connection.write(command)
+        except serial.SerialException:
+            print "Lost connection"
+            tkMessageBox.showinfo('Uh-oh', "Lost connection to the robot!")
+            connection = None
+
+        print ' '.join([ str(ord(c)) for c in command ])
+        self.text.insert(END, ' '.join([ str(ord(c)) for c in command ]))
+        self.text.insert(END, '\n')
+        self.text.see(END)
+
+    # getDecodedBytes returns a n-byte value decoded using a format string.
+    # Whether it blocks is based on how the connection was set up.
+    def getDecodedBytes(self, n, fmt):
+        global connection
+        
+        try:
+            return struct.unpack(fmt, connection.read(n))[0]
+        except serial.SerialException:
+            print "Lost connection"
+            tkMessageBox.showinfo('Uh-oh', "Lost connection to the robot!")
+            connection = None
+            return None
+        except struct.error:
+            print "Got unexpected data from serial port."
+            return None
+
+    # get8Unsigned returns an 8-bit unsigned value.
+    def get8Unsigned(self):
+        return getDecodedBytes(1, "B")
+
+    # get8Signed returns an 8-bit signed value.
+    def get8Signed(self):
+        return getDecodedBytes(1, "b")
+
+    # get16Unsigned returns a 16-bit unsigned value.
+    def get16Unsigned(self):
+        return getDecodedBytes(2, ">H")
+
+    # get16Signed returns a 16-bit signed value.
+    def get16Signed(self):
+        return getDecodedBytes(2, ">h")
+
+    # A handler for keyboard events. Feel free to add more!
+    def callbackKey(self, event):
+        k = event.keysym.upper()
+        motionChange = False
+
+        if event.type == '2': # KeyPress; need to figure out how to get constant
+            if k == 'P':   # Passive
+                self.sendCommandASCII('128')
+            elif k == 'S': # Safe
+                self.sendCommandASCII('131')
+            elif k == 'F': # Full
+                self.sendCommandASCII('132')
+            elif k == 'C': # Clean
+                self.sendCommandASCII('135')
+            elif k == 'D': # Dock
+                self.sendCommandASCII('143')
+            elif k == 'SPACE': # Beep
+                self.sendCommandASCII('141 3')
+            elif k == 'O': # BOOB
+                self.sendCommandASCII('164 66 79 79 66')
+            elif k == 'R': # Reset
+                self.sendCommandASCII('7')
+            elif k == 'UP':
+                self.callbackKeyUp = True
+                motionChange = True
+            elif k == 'DOWN':
+                self.callbackKeyDown = True
+                motionChange = True
+            elif k == 'LEFT':
+                self.callbackKeyLeft = True
+                motionChange = True
+            elif k == 'RIGHT':
+                self.callbackKeyRight = True
+                motionChange = True
+            else:
+                print repr(k), "not handled"
+        elif event.type == '3': # KeyRelease; need to figure out how to get constant
+            if k == 'UP':
+                self.callbackKeyUp = False
+                motionChange = True
+            elif k == 'DOWN':
+                self.callbackKeyDown = False
+                motionChange = True
+            elif k == 'LEFT':
+                self.callbackKeyLeft = False
+                motionChange = True
+            elif k == 'RIGHT':
+                self.callbackKeyRight = False
+                motionChange = True
+            
+        if motionChange == True:
+            velocity = 0
+            velocity += VELOCITYCHANGE if self.callbackKeyUp is True else 0
+            velocity -= VELOCITYCHANGE if self.callbackKeyDown is True else 0
+            rotation = 0
+            rotation += ROTATIONCHANGE if self.callbackKeyLeft is True else 0
+            rotation -= ROTATIONCHANGE if self.callbackKeyRight is True else 0
+
+            # compute left and right wheel velocities
+            vr = velocity + (rotation/2)
+            vl = velocity - (rotation/2)
+
+            # create drive command
+            cmd = struct.pack(">Bhh", 145, vr, vl)
+            if cmd != self.callbackKeyLastDriveCommand:
+                self.sendCommandRaw(cmd)
+                self.callbackKeyLastDriveCommand = cmd
 
 
 def main():
