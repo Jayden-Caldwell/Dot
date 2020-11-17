@@ -26,8 +26,8 @@ except ImportError:
     tkMessageBox.showerror('Import error', 'Please install pyserial.')
     raise
 
-connection = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=1)
-#connectuon = None
+#connection = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=1)
+connectuon = None
 
 TEXTWIDTH = 40 # window width, in characters
 TEXTHEIGHT = 16 # window height, in lines
@@ -95,8 +95,8 @@ class Survey(tk.Frame):
         self.easy_frame.place(relwidth=0.8,relheight=0.8,relx=0.1,rely=0.1) 
         self.ques.place(relx=0.5,rely=0.2,anchor=CENTER)           
         self.nextQuestion.place(relx=0.5,rely=0.7,anchor=CENTER)
-        self.yes_choice.place(relx=0.43,rely=0.45,anchor=CENTER)
-        self.no_choice.place(relx=0.56,rely=0.45,anchor=CENTER)
+        self.yes_choice.place(relx=0.33,rely=0.45,anchor=CENTER)
+        self.no_choice.place(relx=0.66,rely=0.45,anchor=CENTER)
         self.bar.place(relx=0.5,rely=0.9,anchor=CENTER)
         self.root.mainloop()
         
@@ -113,6 +113,7 @@ class Survey(tk.Frame):
                 #e.destroy()
                 #showMark(score)
         elif self.count == (number_of_questions-1):
+            self.answers.append(self.current_answer.get())
             self.nextQuestion.configure(text='finish',command=self.finish)
             
         if self.count <= number_of_questions:
@@ -179,10 +180,10 @@ class Survey(tk.Frame):
         self.answers = []
         self.easy_frame = Frame(self.canvas,bg="white")
         self.bar = ttk.Progressbar(self.easy_frame, length=200, style='black.Horizontal.TProgressbar')
-        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 50",bg="white", wraplength = 800)
-        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 102,height=2,)
-        self.yes_choice = Radiobutton(self.easy_frame,text="yes",font="calibri 30",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white")
-        self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30",value="no", tristatevalue = 0, variable = self.current_answer,bg="white")
+        self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 40 bold",bg="white", wraplength = 600)
+        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 30,height=1, bg="#63bf6c", fg="white", font="calibri 20 bold")
+        self.yes_choice = Radiobutton(self.easy_frame,text="Yes",font="calibri 30 bold",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white", fg="darkgreen")
+        self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30 bold",value="no", tristatevalue = 0, variable = self.current_answer,bg="white", fg="red")
         self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
 
 
@@ -225,10 +226,7 @@ class Survey(tk.Frame):
             connection = None
 
         print ' '.join([ str(ord(c)) for c in command ])
-        self.text.insert(END, ' '.join([ str(ord(c)) for c in command ]))
-        self.text.insert(END, '\n')
-        self.text.see(END)
-
+        
     # getDecodedBytes returns a n-byte value decoded using a format string.
     # Whether it blocks is based on how the connection was set up.
     def getDecodedBytes(self, n, fmt):
@@ -336,8 +334,8 @@ def main():
     #main.ask_questions()
     #survey.write_answers_to_file(answers)
     #main.pack(side="top", fill="both", expand=True)
-    canvas = Canvas(root,width = 1024,height = 614, bg = 'black')
-    main = Survey('testQuestions.csv', root, canvas)
+    canvas = Canvas(root,width = 800,height = 480, bg = 'black')
+    main = Survey('showcaseQuestions.csv', root, canvas)
     canvas.grid(column = 0 , row = 1)
     #img = PhotoImage(file="smiley.gif")
     #canvas.create_image(50,10,image=img,anchor=NW)
