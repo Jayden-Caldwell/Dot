@@ -53,15 +53,15 @@ Dot features a minimal colour scheme, being almost entirely white. The only othe
 
 ## Face
   
-[Dot's neutral expression](images/DotNeutral.png)
+![Dot's neutral expression](images/1DotNeutralAnimation.gif)
 
 **Figure 2: Dot&#39;s neutral expression**
 
-[Dot's happy expression](images/DotHappy.png)
+![Dot's happy expression](images/2DotHappyAnimation.gif)
 
 **Figure 3: Dot&#39;s happy expression**
 
-[Dot's distressed expression](images/DotDistressedFrame1.png)
+![Dot's distressed expression](images/3DotDistressedAnimation.gif)
 
 **Figure 3: Dot&#39;s distressed expression**
 
