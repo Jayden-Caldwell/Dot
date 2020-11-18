@@ -22,7 +22,7 @@ A similar design philosophy was taken with the design of Care-O-bot 4, from Frau
 
 Colour is also an important design consideration when designing a robot. Both Care-O-bot 4 and Pepper, as well as many other social robots, have very similar colour schemes: white with black accents (Kittmann et al., 2015; Pandey &amp; Gelin, 2018). The colour white has psychological connotations with integrity, innocence, and purity; all three are important associations to be made with a robot designed to be appealing to people (Przybyla, 2020). There are also benefits to the mono-chromatic minimal colour scheme, not least of which is that it makes the design look clean and simple (Cousins, 2015). Additionally, the black accents immediately draw the user&#39;s eyes to the most important bits of the design which, for both and Pepper and Care-O-bot 4, are their screens, which is what the user will be interacting with most of the time. Because the rest of their designs are primarily white, the user will instinctively draw their eyes to the black parts.
 
-While not fundamentally linked to the overall appeal of a robot, the contexts in which it will look visually appropriate are also important to consider. Both Pepper and Care-O-bot 4 are designed in such a way that allow them to be placed in a variety of places without looking out of place (Kittmann et al., 2015; Pandey &amp; Gelin, 2018). Someone could find a Pepper robot operating as a storefront gimmick, at expos, and in healthcare settings, among other places (_Love, Pepper_, 2019; _Pepper at Westfield – Highlight_, 2017, 03:15–05:21; _Pepper&#39;s Capabilities | Pepper at AT&amp;T SHAPE Tech Expo | SoftBank Robotics Video_, 2016). The reasons that these robots look visually appropriate almost anywhere is due to the reasons stated above; their minimal designs mean they will not look out of place.
+While not fundamentally linked to the overall appeal of a robot, the contexts in which it will look visually appropriate are also important to consider. Both Pepper and Care-O-bot 4 are designed in such a way that allow them to be placed in a variety of places without looking out of place (Kittmann et al., 2015; Pandey &amp; Gelin, 2018). Someone could find a Pepper robot operating as a storefront gimmick, at expos, and in healthcare settings, among other places (_Love, Pepper_, 2019; _Pepper at Westfield – Highlight_, 2017, 03:15–05:21; _Pepper&#39;s Capabilities, 2016). The reasons that these robots look visually appropriate almost anywhere is due to the reasons stated above; their minimal designs mean they will not look out of place.
 
 # Design considerations for robot faces
 
@@ -53,15 +53,15 @@ Dot features a minimal colour scheme, being almost entirely white. The only othe
 
 ## Face
   
-[Dot's neutral expression](images/1DotNeutralAnimation.gif)
+[Dot's neutral expression](images/DotNeutral.png)
 
 **Figure 2: Dot&#39;s neutral expression**
 
-[Dot's happy expression](images/2DotHappyAnimation.gif)
+[Dot's happy expression](images/DotHappy.png)
 
 **Figure 3: Dot&#39;s happy expression**
 
-[Dot's distressed expression](images/3DotDistressedAnimation.gif)
+[Dot's distressed expression](images/DotDistressedFrame1.png)
 
 **Figure 3: Dot&#39;s distressed expression**
 
