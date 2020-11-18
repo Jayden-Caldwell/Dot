@@ -42,6 +42,7 @@ This report will now discuss how the above face and body design considerations h
 
 
 ![Dot's finalized body design](images/DotFinalDesign.png)
+
 **Figure 1: Dot&#39;s finalized body design**
 
 Dot&#39;s body design resembles a vertical oblong-like shape and will stand at 750mm tall. The height was chosen because it meant that the screen (its only method of interaction) will be a convenient distance between it and someone&#39;s fingers. This height was also chosen so that there wouldn&#39;t be any issues keeping itself balanced. Its base is circular with an outer width of 347mm and inner width of 344mm. The width is designed to accommodate the iRobot Create 2, which is the platform it will use to move around a room. Some form of apparatus to adhere Dot to the platform will be necessary. Dot&#39;s body is hollow, which was done to reduce the materials needed in its construction, and also to allow for a cable to connect from the screen to the Raspberry Pi, which would sit near the bottom of its shell. The hollow design is also to ensure a light weight, with the Create 2 having a safe weight limit of 9kg (_What Is the Maximum Payload Weight for Create 2/Can I Use Old Create Accessories with the Create 2?_, 2014). A rectangular hole measuring 165mm x 100mm would be cut near the top of Dot&#39;s shell for the 7&quot; touchscreen to be inserted.
@@ -53,12 +54,15 @@ Dot features a minimal colour scheme, being almost entirely white. The only othe
 ## Face
   
 [Dot's neutral expression](images/1DotNeutralAnimation.gif)
+
 **Figure 2: Dot&#39;s neutral expression**
 
 [Dot's happy expression](images/2DotHappyAnimation.gif)
+
 **Figure 3: Dot&#39;s happy expression**
 
 [Dot's distressed expression](images/3DotDistressedAnimation.gif)
+
 **Figure 3: Dot&#39;s distressed expression**
 
 The face for Dot is 804 x 849 pixels and is designed to fit on 7&quot; touchscreen. This touchscreen is Dot&#39;s method for interactivity between it and the user, with the interaction being when a person taps on its screen, they will be prompted with a questionnaire to fill out. Dot will be able to express three different emotions based on its current state. Its neutral expression (figure 2) will be active whenever it is moving around, looking for a person to fill out its questionnaire. The happy expression (figure 3) will occur when said person has filled out its survey. The distressed expression (figure 4) will occur if Dot gets stuck trying to move around. While the mostly black screen serves no purpose aside from design, if we were to switch to an OLED/AMOLED screen at some point it would help in the conservation of battery life.
