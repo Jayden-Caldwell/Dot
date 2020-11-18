@@ -12,7 +12,7 @@ import Tkinter as tk
 from Tkinter import *
 import ttk
 #import pyttsx
-#import time
+import threading as th
 from Tkinter import *
 import tkMessageBox
 import tkSimpleDialog
@@ -26,14 +26,14 @@ except ImportError:
     tkMessageBox.showerror('Import error', 'Please install pyserial.')
     raise
 
-connection = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=1)
-#connectuon = None
+#connection = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=1)
+connectuon = None
 
 TEXTWIDTH = 40 # window width, in characters
 TEXTHEIGHT = 16 # window height, in lines
 
-VELOCITYCHANGE = 200
-ROTATIONCHANGE = 300
+VELOCITYCHANGE = 300
+ROTATIONCHANGE = 400
 
 helpText = """\
 Supported Keys:
@@ -132,9 +132,6 @@ class Survey(tk.Frame):
         self.lbl_finish_gif.bind("<Button-1>", self.restart)     
         #self.nextQuestion.configure(text = "GoodBye", command=self.startScreen)
         #self.tts()
-        #time.wait(15)
-        #self.startScreen()
-        
         
     def tts(self):
         #trying out tts
@@ -181,7 +178,7 @@ class Survey(tk.Frame):
         self.easy_frame = Frame(self.canvas,bg="white")
         self.bar = ttk.Progressbar(self.easy_frame, length=200, style='black.Horizontal.TProgressbar')
         self.ques = Label(self.easy_frame,text =self.questions["question"][self.count],font="calibri 30 bold",bg="white", wraplength = 600)
-        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 30,height=1, bg="#63bf6c", activebackground="#63bf6c" fg="white", font="calibri 20 bold")
+        self.nextQuestion = Button(self.easy_frame,command=self.display,text="Next", width = 30,height=1, bg="#63bf6c", activebackground="#63bf6c", fg="white", font="calibri 20 bold")
         self.yes_choice = Radiobutton(self.easy_frame,text="Yes",font="calibri 30 bold",value="yes",  tristatevalue= 0 ,variable = self.current_answer,bg="white", fg="darkgreen")
         self.no_choice = Radiobutton(self.easy_frame,text="No",font="calibri 30 bold",value="no", tristatevalue = 0, variable = self.current_answer,bg="white", fg="red")
         self.lbl_finish_gif = AnimatedGif(self.root, 'emotions/loveOptimised.gif', 0.8)  # (tkinter.parent, filename, delay between frames)
