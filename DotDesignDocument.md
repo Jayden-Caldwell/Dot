@@ -63,7 +63,7 @@ Dot features a minimal colour scheme, being almost entirely white. The only othe
 
 ![Dot's distressed expression](images/3DotDistressed.gif)
 
-**Figure 3: Dot&#39;s distressed expression**
+**Figure 4: Dot&#39;s distressed expression**
 
 The face for Dot is 804 x 849 pixels and is designed to fit on 7&quot; touchscreen. This touchscreen is Dot&#39;s method for interactivity between it and the user, with the interaction being when a person taps on its screen, they will be prompted with a questionnaire to fill out. Dot will be able to express three different emotions based on its current state. Its neutral expression (figure 2) will be active whenever it is moving around, looking for a person to fill out its questionnaire. The happy expression (figure 3) will occur when said person has filled out its survey. The distressed expression (figure 4) will occur if Dot gets stuck trying to move around. While the mostly black screen serves no purpose aside from design, if we were to switch to an OLED/AMOLED screen at some point it would help in the conservation of battery life.
 
