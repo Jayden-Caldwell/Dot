@@ -7,7 +7,7 @@ layout: default
 [Hardware](Hardware.md) |
 [Graphical User Interface](GUI.md) |
 [Human Interaction](human-interaction.md) |
-[Design](robot-design.md) |
+[Design](DotDesignDocument.md) |
 [Reflections](reflections.md)
 
 
