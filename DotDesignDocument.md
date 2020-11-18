@@ -61,7 +61,7 @@ Dot features a minimal colour scheme, being almost entirely white. The only othe
 
 **Figure 3: Dot&#39;s happy expression**
 
-![Dot's distressed expression](images/3DotDistressedAnimation.gif)
+![Dot's distressed expression](images/3DotDistressed.gif)
 
 **Figure 3: Dot&#39;s distressed expression**
 
