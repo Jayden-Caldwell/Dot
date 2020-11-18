@@ -1,3 +1,11 @@
+[Home](index.md) |
+[Hardware Plan](hardware-plan.md) |
+[Hardware](Hardware.md) |
+[Graphical User Interface](GUI.md) |
+[Human Interaction](human-interaction.md) |
+[Design](DotDesignDocument.md) |
+[Reflections](reflections.md)
+
 # Introduction
 
 As robots designed to be interacted with by humans (social robots) become more prevalent in our daily lives, so too does the importance for these robot&#39;s designs to be appealing to the people who use them. This idea is crucial in the design process of Dot, a robot which is intended to autonomously approach people in a variety of contexts and get them to complete a survey. This report will first discuss how the uncanny valley effect must be avoided when designing social robots. It will also go into the various design considerations that must be made regarding a robot&#39;s design, focusing on the body and face. Finally, it will review how these design considerations have been applied to Dot&#39;s overall design.
