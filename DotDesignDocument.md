@@ -38,13 +38,11 @@ In a paper from Blow et al. (2006) detailing the face designing process for a so
 
 This report will now discuss how the above face and body design considerations have been applied to the final implementation of Dot&#39;s own design, as well as how it&#39;s design will accommodate the hardware it needs to function. Unfortunately, we were unable to procure a physical version of these designs due to communication issues with the design department, so we were not capable of fully realizing or testing the potence of this design. However, due to the thorough research above, we believe that this design for Dot would have been fully capable of appealing to people.
 
-##
+## Body
 
+
+![Dot's finalized body design](images/DotFinalDesign.png)
 **Figure 1: Dot&#39;s finalized body design**
-
-Body
-
-![](RackMultipart20201118-4-mxdhtg_html_bf188a0c317b99d9.png)
 
 Dot&#39;s body design resembles a vertical oblong-like shape and will stand at 750mm tall. The height was chosen because it meant that the screen (its only method of interaction) will be a convenient distance between it and someone&#39;s fingers. This height was also chosen so that there wouldn&#39;t be any issues keeping itself balanced. Its base is circular with an outer width of 347mm and inner width of 344mm. The width is designed to accommodate the iRobot Create 2, which is the platform it will use to move around a room. Some form of apparatus to adhere Dot to the platform will be necessary. Dot&#39;s body is hollow, which was done to reduce the materials needed in its construction, and also to allow for a cable to connect from the screen to the Raspberry Pi, which would sit near the bottom of its shell. The hollow design is also to ensure a light weight, with the Create 2 having a safe weight limit of 9kg (_What Is the Maximum Payload Weight for Create 2/Can I Use Old Create Accessories with the Create 2?_, 2014). A rectangular hole measuring 165mm x 100mm would be cut near the top of Dot&#39;s shell for the 7&quot; touchscreen to be inserted.
 
@@ -52,15 +50,16 @@ There are several reasons why we believe that this body design will be appealing
 
 Dot features a minimal colour scheme, being almost entirely white. The only other colour, black, is used for the screen. Glossy plastic would be used as the construction material. These design choices have several key benefits in increasing Dot&#39;s visual appeal. The minimal colour scheme will draw people&#39;s eyes to Dot&#39;s screen, which is how they will interact with it (Cousins, 2015). White also draws mental connections to purity and innocence (Przybyla, 2020). The use of glossy plastic will help in terms of attracting people to Dot, as glossy objects are mentally correlated with higher quality (_Why Are People Attracted To Shiny Objects?_, 2019).
 
-## ![](RackMultipart20201118-4-mxdhtg_html_7b232063af6e3eeb.gif) ![](RackMultipart20201118-4-mxdhtg_html_bd71800aa5033e2.gif) ![](RackMultipart20201118-4-mxdhtg_html_1c517a6965a75694.gif)
-
-**Figure 4: Dot&#39;s distressed expression**
-
-**Figure 3: Dot&#39;s happy expression**
-
+## Face
+  
+[Dot's neutral expression](images/1DotNeutralAnimation.gif)
 **Figure 2: Dot&#39;s neutral expression**
 
-Face
+[Dot's happy expression](images/2DotHappyAnimation.gif)
+**Figure 3: Dot&#39;s happy expression**
+
+[Dot's distressed expression](images/3DotDistressedAnimation.gif)
+**Figure 3: Dot&#39;s distressed expression**
 
 The face for Dot is 804 x 849 pixels and is designed to fit on 7&quot; touchscreen. This touchscreen is Dot&#39;s method for interactivity between it and the user, with the interaction being when a person taps on its screen, they will be prompted with a questionnaire to fill out. Dot will be able to express three different emotions based on its current state. Its neutral expression (figure 2) will be active whenever it is moving around, looking for a person to fill out its questionnaire. The happy expression (figure 3) will occur when said person has filled out its survey. The distressed expression (figure 4) will occur if Dot gets stuck trying to move around. While the mostly black screen serves no purpose aside from design, if we were to switch to an OLED/AMOLED screen at some point it would help in the conservation of battery life.
 
