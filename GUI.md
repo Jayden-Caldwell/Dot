@@ -269,5 +269,32 @@ I also had to install some more dependencies to get it working:
 <img src="images/happyStart.PNG" alt="drawing" width="500"/>
 <img src="images/loveEnd.PNG" alt="drawing" width="500"/>
 
+- To get the GUI working on DOT with the program to make it drive we had to put the two programs together. Initially I tried getting the driving class and added it to the GUI program, but it was throwing some errors which I deducted was because both classes were using the tkinter object which was causing issues. So I took the code that was in the driving class and put the functions inside the survey class. There were portions of code that I had to add to the survey init/constructor to make this work. After a some time of working through alot of errors I managed to make it so that the GUI itself looked for the keystrokes from the controller, so that The GUI is showing on the screen you can move DOT easily without having to click out of the GUI.
 
+[Here is a link to the commit where I did this](https://github.com/Jayden-Caldwell/Dot/commit/bef8f709faac1827e4b8f860b89b185c2ff7921e)
+
+- Once the driving was working inside the GUI I started working on making the GUI look better and fit to the touchscreen. I changed the size of the tkinter window, moved the positioning of the radio buttons, changed the size of the text and where it should wrap, and changed colours of the buttons so that it was a bit more user friendly.
+
+<img src="images/finalStartScreen.PNG" alt="drawing" width="500"/>
+
+<img src="images/finalSurveyQuestion.PNG" alt="drawing" width="500"/>
+
+<img src="images/finalEndScreen.PNG" alt="drawing" width="500"/>
+
+- I decided that it would be better to make the GUI be fullscreen on startup so I added the code to the main function to do this and changed the initial fullscreen button to be to disable fullscreen.
+
+<img src="images/fullscreen1.PNG" alt="drawing" width="500"/>
+<img src="images/fullscreen2.PNG" alt="drawing" width="500"/>
+
+- I also decided to change the questions so the were more relevent to the upcoming event. 
+
+<img src="images/surveyQues.PNG" alt="drawing" width="500"/>
+
+The last question is more of an inside joke amongst our team, but I am pretty sure everyone will say yes to that question.
+
+- After testing the GUI I realised that the mouse curser was sort of pointless on a touchscreen so I found the code needed to hide the curser and added it the program.
+
+<img src="images/noCursor.PNG" alt="drawing" width="500"/>
+
+- We also decided that it would be cool to have the program boot up on startup, so now when you turn on the rasp pi it automaticlly starts up the GUI/Driving program so as soon as you turn everything on you can pick up the controller and GO.
 
