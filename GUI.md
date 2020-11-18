@@ -271,7 +271,7 @@ I also had to install some more dependencies to get it working:
 
 - To get the GUI working on DOT with the program to make it drive we had to put the two programs together. Initially I tried getting the driving class and added it to the GUI program, but it was throwing some errors which I deducted was because both classes were using the tkinter object which was causing issues. So I took the code that was in the driving class and put the functions inside the survey class. There were portions of code that I had to add to the survey init/constructor to make this work. After a some time of working through alot of errors I managed to make it so that the GUI itself looked for the keystrokes from the controller, so that The GUI is showing on the screen you can move DOT easily without having to click out of the GUI.
 
-[Here is a link to the commit where I did this](https://github.com/Jayden-Caldwell/Dot/commit/bef8f709faac1827e4b8f860b89b185c2ff7921e)
+[Here is a link to the commit where I did this](https://github.com/Jayden-Caldwell/Dot/commit/bef8f709faac1827e4b8f860b89b185c2ff7921e#diff-4cc1216f64aeb3ceab3a4c651cbede3bfb8d2ad2952bdadf19249c859a16a59a)
 
 - Once the driving was working inside the GUI I started working on making the GUI look better and fit to the touchscreen. I changed the size of the tkinter window, moved the positioning of the radio buttons, changed the size of the text and where it should wrap, and changed colours of the buttons so that it was a bit more user friendly.
 
@@ -286,7 +286,7 @@ I also had to install some more dependencies to get it working:
 <img src="images/fullscreen1.PNG" alt="drawing" width="500"/>
 <img src="images/fullscreen2.PNG" alt="drawing" width="500"/>
 
-- I also decided to change the questions so the were more relevent to the upcoming event. 
+- I also decided to change the questions so that they were more relevent to the upcoming event. 
 
 <img src="images/surveyQues.PNG" alt="drawing" width="500"/>
 
